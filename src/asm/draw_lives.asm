@@ -35,27 +35,25 @@
 	section	.text
 	public	_draw_lives
 _draw_lives:
-	ld	hl, 29
+	ld	hl, 164
 	push	hl
-	ld	l, 164
+	ld	l, 29
 	push	hl
 	call	_gfx_SetTextXY
-	ld	a, (_oiram+38)
-	or	a, a
-	sbc	hl, hl
-	ld	l, a
+	ld	hl, 2
 	push	hl
-	ld	l, 2
+	ld	a, (_oiram+38)
+	ld	l, a
 	push	hl
 	call	_gfx_PrintUInt
 	ld	hl, 8
 	push	hl
-	ld	de, -92
-	push	de
-	ld	l, 1
+	ld	l, 164
+	push	hl
+	ld	l, 1		; _gfx_buffer
 	push	hl
 	call	_gfx_BlitLines
-	ld	hl, 14
+	ld	hl, 21
 	add	hl, sp
 	ld	sp, hl
 	ret

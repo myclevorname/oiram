@@ -16,9 +16,9 @@
 _remove_simple_mover:
 	ld hl, _num_simple_movers
 	ld a, (hl)
-	inc (hl)
 	or a, a
 	ret z
+	dec (hl)
 
 	pop	de
 	ex	(sp), hl
