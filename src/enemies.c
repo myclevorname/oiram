@@ -44,7 +44,7 @@ void add_reswob(uint8_t *tile); /* {
     e->type = RESWOB_TYPE;
 } */
 
-void add_boo(uint8_t *tile) {
+void add_boo(uint8_t *tile); /* {
     boo_t *e;
     unsigned int x, y;
 
@@ -62,7 +62,7 @@ void add_boo(uint8_t *tile) {
     e->dir = false;
     e->count = 0;
     num_boos++;
-}
+} */
 
 void remove_boo(uint8_t i) {
     boo_t *e;

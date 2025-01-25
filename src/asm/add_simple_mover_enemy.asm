@@ -148,11 +148,9 @@ _add_simple_mover:
 	call	_tile_to_abs_xy_pos
 	pop	af, af, af
 	ld	hl, 21
-	push	hl
+	push	hl, hl		; memcpy size, malloc size
 	call	_malloc
 	pop	af
-	ld	de, 21
-	push	de		; size
 	ld de, _mover_template
 	push	de		; src (template)
 	push	hl		; dest (malloc'd buffer)
@@ -161,14 +159,13 @@ _add_simple_mover:
 
 	ex	de, hl
 
-	ld	bc, 0
+	ld	b, 3
 
 	ld	a, (_num_simple_movers)
 
 	ld	c, a
 	ld	hl, _simple_mover
-	add	hl, bc
-	add	hl, bc
+	mlt	bc
 	add	hl, bc
 	ld	(hl), de
 
