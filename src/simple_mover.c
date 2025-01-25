@@ -17,7 +17,7 @@ simple_move_t *simple_mover[MAX_SIMPLE_MOVERS];
 uint8_t num_simple_movers = 0;
 uint8_t simple_mover_type;
 
-simple_move_t *add_simple_mover(uint8_t *spawing_tile) {
+simple_move_t *add_simple_mover(uint8_t *spawing_tile); /* {
     simple_move_t *mover;
     unsigned int x, y;
 
@@ -42,9 +42,9 @@ simple_move_t *add_simple_mover(uint8_t *spawing_tile) {
     mover->fly_counter = 0;
     num_simple_movers++;
     return mover;
-}
+} */
 
-void remove_simple_mover(uint8_t i) {
+void remove_simple_mover(uint8_t i); /* {
     simple_move_t *mover = simple_mover[i];
     uint8_t num_simple_movers_less;
 
@@ -59,7 +59,7 @@ void remove_simple_mover(uint8_t i) {
     }
 
     free(mover);
-}
+} */
 
 void simple_move_handler(simple_move_t *this) {
     int tmp_x, tmp_y;

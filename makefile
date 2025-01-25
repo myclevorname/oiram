@@ -5,7 +5,7 @@
 NAME ?= OIRAM
 ICON ?= iconc.png
 DESCRIPTION ?= "Oiram"
-COMPRESSED ?= YES
+COMPRESSED ?= NO
 ARCHIVED ?= NO
 
 CFLAGS ?= -Wall -Wextra -Oz

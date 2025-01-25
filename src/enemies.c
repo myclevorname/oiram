@@ -26,23 +26,23 @@ uint8_t num_simple_enemies = 0;
 // types of shell enemies
 enum { KOOPA_GREEN, KOOPA_RED, KOOPA_GREEN_FLY, KOOPA_RED_FLY, KOOPA_BONES, SPIKE };
 
-void add_goomba(uint8_t *tile) {
+void add_goomba(uint8_t *tile); /* {
     simple_move_t *e = add_simple_mover(tile);
 
     e->hitbox.width = GOOMBA_WIDTH;
     e->hitbox.height = GOOMBA_HEIGHT;
     e->vx = -1;
     e->type = GOOMBA_TYPE;
-}
+} */
 
-void add_reswob(uint8_t *tile) {
+void add_reswob(uint8_t *tile); /* {
     simple_move_t *e = add_simple_mover(tile);
 
     e->hitbox.width = RESWOB_WIDTH;
     e->hitbox.height = RESWOB_HEIGHT;
     e->vx = -1;
     e->type = RESWOB_TYPE;
-}
+} */
 
 void add_boo(uint8_t *tile) {
     boo_t *e;

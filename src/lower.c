@@ -34,17 +34,17 @@ void draw_coins(void) {
     gfx_BlitLines(gfx_buffer, 144, 8);
 }
 
-void draw_lives(void) {
+void draw_lives(void); /* {
     gfx_SetTextXY(29, 164);
     gfx_PrintUInt(oiram.lives, 2);
     gfx_BlitLines(gfx_buffer, 164, 8);
-}
+} */
 
-void add_life(void) {
+void add_life(void); /* {
     oiram.lives++;
     if (oiram.lives > 99) { oiram.lives = 99; }
     draw_lives();
-}
+} */
 
 // add a coin, if we reach 100 coins, add another life
 void add_coin(int x, int y) {

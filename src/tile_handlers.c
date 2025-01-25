@@ -83,7 +83,7 @@ static uint8_t upspk_tile_handler(uint8_t *tile) {
     return 0;
 }
 
-static uint8_t plant_tile_handler(uint8_t *tile) {
+/* static */ uint8_t plant_tile_handler(uint8_t *tile); /* {
     (void)tile;
     if (!handling_events) {
         if (move_side == TILE_TOP) {
@@ -92,7 +92,7 @@ static uint8_t plant_tile_handler(uint8_t *tile) {
         return 0;
     }
     return 1;
-}
+} */
 
 static uint8_t ice_block_handler(uint8_t *tile) {
     if (handling_events) {
